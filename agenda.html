@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="icone/favicon-32.png" type="image/png" sizes="32x32">
+  <title>AGENDA — KRAPULARCHIVE</title>
+  <meta name="description" content="Consulte l’agenda des prochains événements de KRAPULARCHIVE.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://krapularchive.fr/agenda.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KRAPULARCHIVE">
+  <meta property="og:title" content="Agenda — KRAPULARCHIVE">
+  <meta property="og:description" content="Consulte l’agenda des prochains événements de KRAPULARCHIVE.">
+  <meta property="og:url" content="https://krapularchive.fr/agenda.html">
+  <meta property="og:image" content="https://krapularchive.fr/images/social-preview.png">
+  <meta property="og:image:width" content="768">
+  <meta property="og:image:height" content="768">
+  <meta property="og:image:alt" content="Illustration colorée d’une tête sur fond noir.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://krapularchive.fr/images/social-preview.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+  <script src="agenda-calendar.js" defer></script>
+</head>
+<body data-page="agenda">
+  <svg class="video-filter-definitions" aria-hidden="true" focusable="false">
+    <filter id="agenda-posterize-filter" color-interpolation-filters="sRGB">
+      <feComponentTransfer>
+        <feFuncR type="discrete" tableValues="0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1"></feFuncR>
+        <feFuncG type="discrete" tableValues="0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1"></feFuncG>
+        <feFuncB type="discrete" tableValues="0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1"></feFuncB>
+      </feComponentTransfer>
+    </filter>
+  </svg>
+  <main class="stage" aria-label="Agenda">
+    <video class="stage-video page-video" data-video="agenda" autoplay muted loop playsinline preload="auto" aria-label="Vidéo de l’agenda">
+      <source src="vidéos/agenda.webm" type='video/webm; codecs="vp9"'>
+      <source src="vidéos/agenda.mp4" type="video/mp4">
+    </video>
+    <section class="agenda-calendar" aria-labelledby="calendar-title">
+      <header class="agenda-calendar__header">
+        <h1 id="calendar-title">Agenda</h1>
+        <nav class="agenda-calendar__navigation" aria-label="Navigation du calendrier">
+          <button class="calendar-button" id="previous-month" type="button" aria-label="Mois précédent">‹</button>
+          <h2 class="agenda-calendar__month" id="calendar-month" aria-live="polite"></h2>
+          <button class="calendar-button" id="next-month" type="button" aria-label="Mois suivant">›</button>
+        </nav>
+      </header>
+      <p class="agenda-calendar__status" id="calendar-status" role="status" hidden></p>
+      <div class="calendar-grid" id="calendar-grid" role="grid" aria-label="Calendrier des événements"></div>
+      <section class="agenda-calendar__events" aria-live="polite" aria-labelledby="selected-date">
+        <h2 id="selected-date"></h2>
+        <ul class="event-list" id="event-list"></ul>
+      </section>
+      <span class="agenda-calendar__frame" aria-hidden="true"></span>
+    </section>
+    <a class="back-link" href="index.html" aria-label="Retour à l’accueil">
+      <img src="images/back.png" alt="Retour à l’accueil">
+    </a>
+    <p class="media-status" role="alert" hidden></p>
+  </main>
+</body>
+</html>

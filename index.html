@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="icone/favicon-32.png" type="image/png" sizes="32x32">
+  <title>KRAPULARCHIVE — AGENDA, DJ SETS ET CONTACT</title>
+  <meta name="description" content="Agenda des événements, DJ sets et contacts de KRAPULARCHIVE.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://krapularchive.fr/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KRAPULARCHIVE">
+  <meta property="og:title" content="KRAPULARCHIVE">
+  <meta property="og:description" content="Agenda des événements, DJ sets et contacts de KRAPULARCHIVE.">
+  <meta property="og:url" content="https://krapularchive.fr/">
+  <meta property="og:image" content="https://krapularchive.fr/images/social-preview.png">
+  <meta property="og:image:width" content="768">
+  <meta property="og:image:height" content="768">
+  <meta property="og:image:alt" content="Illustration colorée d’une tête sur fond noir.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://krapularchive.fr/images/social-preview.png">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "KRAPULARCHIVE",
+      "url": "https://krapularchive.fr/",
+      "inLanguage": "fr",
+      "description": "Agenda des événements, DJ sets et contacts de KRAPULARCHIVE."
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-page="home">
+  <main class="stage" aria-label="Accueil">
+    <video class="stage-video lobby-video" data-video="lobby" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+      <source src="vidéos/lobby.webm" type='video/webm; codecs="vp9"'>
+      <source src="vidéos/lobby.mp4" type="video/mp4">
+    </video>
+    <video class="stage-video hotspot-video" data-video="contact" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+      <source src="vidéos/lobbyc.webm" type='video/webm; codecs="vp9"'>
+      <source src="vidéos/lobbyc.mp4" type="video/mp4">
+    </video>
+    <video class="stage-video hotspot-video" data-video="agenda" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+      <source src="vidéos/lobbya.webm" type='video/webm; codecs="vp9"'>
+      <source src="vidéos/lobbya.mp4" type="video/mp4">
+    </video>
+    <video class="stage-video hotspot-video" data-video="dj-sets" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+      <source src="vidéos/lobbyd.webm" type='video/webm; codecs="vp9"'>
+      <source src="vidéos/lobbyd.mp4" type="video/mp4">
+    </video>
+    <a class="hotspot-label hotspot-label--contact" href="contact.html" data-video="contact" aria-label="contact"><span aria-hidden="true">c</span><span aria-hidden="true">o</span><span aria-hidden="true">n</span><span aria-hidden="true">t</span><span aria-hidden="true">a</span><span aria-hidden="true">c</span><span aria-hidden="true">t</span></a>
+    <a class="hotspot-label hotspot-label--agenda" href="agenda.html" data-video="agenda" aria-label="agenda"><span aria-hidden="true">a</span><span aria-hidden="true">g</span><span aria-hidden="true">e</span><span aria-hidden="true">n</span><span aria-hidden="true">d</span><span aria-hidden="true">a</span></a>
+    <a class="hotspot-label hotspot-label--dj-sets" href="dj-sets.html" data-video="dj-sets" aria-label="dj-sets"><span aria-hidden="true">d</span><span aria-hidden="true">j</span><span aria-hidden="true">-</span><span aria-hidden="true">s</span><span aria-hidden="true">e</span><span aria-hidden="true">t</span><span aria-hidden="true">s</span></a>
+    <p class="media-status" role="alert" hidden></p>
+    <nav class="keyboard-nav" aria-label="Navigation principale">
+      <a href="agenda.html">Agenda</a>
+      <a href="dj-sets.html">DJ sets</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </main>
+</body>
+</html>

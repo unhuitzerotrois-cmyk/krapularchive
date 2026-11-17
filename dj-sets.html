@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="icone/favicon-32.png" type="image/png" sizes="32x32">
+  <title>DJ SETS — KRAPULARCHIVE</title>
+  <meta name="description" content="Écoute et découvre les DJ sets de KRAPULARCHIVE.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://krapularchive.fr/dj-sets.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KRAPULARCHIVE">
+  <meta property="og:title" content="DJ sets — KRAPULARCHIVE">
+  <meta property="og:description" content="Écoute et découvre les DJ sets de KRAPULARCHIVE.">
+  <meta property="og:url" content="https://krapularchive.fr/dj-sets.html">
+  <meta property="og:image" content="https://krapularchive.fr/images/social-preview.png">
+  <meta property="og:image:width" content="768">
+  <meta property="og:image:height" content="768">
+  <meta property="og:image:alt" content="Illustration colorée d’une tête sur fond noir.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://krapularchive.fr/images/social-preview.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+  <script src="dj-sets.js" defer></script>
+</head>
+<body data-page="dj-sets">
+  <main class="stage stage--crt-player" aria-label="DJ sets">
+    <div class="crt-youtube-layer">
+      <iframe
+        class="crt-youtube-frame"
+        src="https://www.youtube-nocookie.com/embed/9adcnCtNKMs?start=0&amp;rel=0"
+        title="Vidéo YouTube dans l’écran du téléviseur"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <video class="stage-video page-video" data-video="dj-sets" autoplay muted loop playsinline preload="auto" aria-label="Vidéo des DJ sets">
+      <source src="vidéos/dj-sets.webm" type='video/webm; codecs="vp9"'>
+      <source src="vidéos/dj-sets.mp4" type="video/mp4">
+    </video>
+    <div class="crt-interface">
+      <svg class="crt-screen-effects" viewBox="0 0 1904 1440" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <clipPath id="crt-screen-shape" clipPathUnits="userSpaceOnUse">
+            <path d="M 585 370 C 565 370 557 381 555 403 C 545 504 545 866 557 970 C 560 990 572 1000 593 1002 C 790 1012 1170 1012 1362 1002 C 1383 1000 1394 990 1397 970 C 1409 866 1407 504 1395 403 C 1393 381 1384 370 1363 370 C 1170 364 785 364 585 370 Z"></path>
+          </clipPath>
+          <radialGradient id="crt-zap-gradient" cx="50%" cy="50%" r="70%">
+            <stop offset="0" stop-color="#fff"></stop>
+            <stop offset="0.3" stop-color="#e5f7ff"></stop>
+            <stop offset="0.72" stop-color="#7fc4ff"></stop>
+            <stop offset="1" stop-color="#376aff"></stop>
+          </radialGradient>
+          <filter id="crt-static-noise">
+            <feTurbulence type="fractalNoise" baseFrequency="0.78" numOctaves="2" seed="8"></feTurbulence>
+            <feColorMatrix type="saturate" values="0"></feColorMatrix>
+          </filter>
+          <filter id="cd-selector-posterize" color-interpolation-filters="sRGB">
+            <feComponentTransfer>
+              <feFuncR type="discrete" tableValues="0 0.14 0.29 0.43 0.57 0.71 0.86 1"></feFuncR>
+              <feFuncG type="discrete" tableValues="0 0.14 0.29 0.43 0.57 0.71 0.86 1"></feFuncG>
+              <feFuncB type="discrete" tableValues="0 0.14 0.29 0.43 0.57 0.71 0.86 1"></feFuncB>
+            </feComponentTransfer>
+          </filter>
+          <pattern id="crt-scanlines" width="1904" height="4" patternUnits="userSpaceOnUse">
+            <rect width="1904" height="1" fill="#fff" fill-opacity="0.12"></rect>
+          </pattern>
+        </defs>
+        <g class="crt-startup-zap" clip-path="url(#crt-screen-shape)">
+          <rect width="1904" height="1440" fill="#eaf7ff"></rect>
+          <rect width="1904" height="1440" fill="url(#crt-zap-gradient)"></rect>
+          <rect y="455" width="1904" height="18" fill="#ff174d" fill-opacity="0.38"></rect>
+          <rect y="742" width="1904" height="9" fill="#00eaff" fill-opacity="0.42"></rect>
+          <rect y="916" width="1904" height="24" fill="#080713" fill-opacity="0.3"></rect>
+          <rect width="1904" height="1440" fill="#fff" filter="url(#crt-static-noise)" fill-opacity="0.24"></rect>
+          <rect width="1904" height="1440" fill="url(#crt-scanlines)"></rect>
+        </g>
+      </svg>
+      <button class="crt-power" type="button" aria-label="Allumer l’écran du téléviseur" aria-pressed="false"></button>
+    </div>
+    <nav class="cd-selector" aria-label="Choisir un DJ set">
+      <div class="cd-selector__track">
+        <h2 class="cd-selector__heading">Choose a fighter</h2>
+        <div class="cd-selector__sequence">
+          <button class="cd-selector__choice" type="button" data-video-id="9adcnCtNKMs" data-start="0" aria-pressed="true" title="LNAX - TRANCE GLOW BPM">
+            <span class="cd-selector__disc">
+              <span class="cd-selector__art"><img src="images/cd-8.png" alt=""></span>
+              <span class="cd-selector__title">LNAX - TRANCE GLOW BPM</span>
+            </span>
+          </button>
+          <button class="cd-selector__choice" type="button" data-video-id="ItyucT5kHXk" data-start="0" aria-pressed="false" title="MEYA - TRANCY PSY HARD SET">
+            <span class="cd-selector__disc">
+              <span class="cd-selector__art"><img src="images/cd-8.png" alt=""></span>
+              <span class="cd-selector__title">MEYA - TRANCY PSY HARD SET</span>
+            </span>
+          </button>
+          <button class="cd-selector__choice" type="button" data-video-id="0vrTSfZygLI" data-start="0" aria-pressed="false" title="ISALYS - CATHARSIS">
+            <span class="cd-selector__disc">
+              <span class="cd-selector__art"><img src="images/cd-8.png" alt=""></span>
+              <span class="cd-selector__title">ISALYS - CATHARSIS</span>
+            </span>
+          </button>
+          <button class="cd-selector__choice" type="button" data-video-id="zkidD_faxY4" data-start="0" aria-pressed="false" title="LOLYTHA - HARDBOUNCE, HARDTRANCE &amp; HARDDANCE SET">
+            <span class="cd-selector__disc">
+              <span class="cd-selector__art"><img src="images/cd-8.png" alt=""></span>
+              <span class="cd-selector__title">LOLYTHA - HARDBOUNCE, HARDTRANCE &amp; HARDDANCE SET</span>
+            </span>
+          </button>
+          <button class="cd-selector__choice" type="button" data-video-id="iep6ffDFXq4" data-start="0" aria-pressed="false" title="ALEX - LA TRIBE EMMERDE TOUJOURS LES FACHOS">
+            <span class="cd-selector__disc">
+              <span class="cd-selector__art"><img src="images/cd-8.png" alt=""></span>
+              <span class="cd-selector__title">ALEX - LA TRIBE EMMERDE TOUJOURS LES FACHOS</span>
+            </span>
+          </button>
+          <button class="cd-selector__choice" type="button" data-video-id="1bYde5cST3c" data-start="0" aria-pressed="false" title="TLEILAXX - GARAGE &amp; HOUSE SET">
+            <span class="cd-selector__disc">
+              <span class="cd-selector__art"><img src="images/cd-8.png" alt=""></span>
+              <span class="cd-selector__title">TLEILAXX - GARAGE &amp; HOUSE SET</span>
+            </span>
+          </button>
+          <button class="cd-selector__choice" type="button" data-video-id="JxzlwW8kPWk" data-start="0" aria-pressed="false" title="CHARACTER - HARDBOUNCE &amp; TRANCE SET">
+            <span class="cd-selector__disc">
+              <span class="cd-selector__art"><img src="images/cd-8.png" alt=""></span>
+              <span class="cd-selector__title">CHARACTER - HARDBOUNCE &amp; TRANCE SET</span>
+            </span>
+          </button>
+          <button class="cd-selector__choice" type="button" data-video-id="lMKSqn4Zxi8" data-start="0" aria-pressed="false" title="TIRA:NO - GROOVE &amp; ACID SET">
+            <span class="cd-selector__disc">
+              <span class="cd-selector__art"><img src="images/cd-8.png" alt=""></span>
+              <span class="cd-selector__title">TIRA:NO - GROOVE &amp; ACID SET</span>
+            </span>
+          </button>
+          <button class="cd-selector__choice" type="button" data-video-id="Zhjb8V3EpKg" data-start="0" aria-pressed="false" title="POL CARTIER - DECONSTRUCTED SET">
+            <span class="cd-selector__disc">
+              <span class="cd-selector__art"><img src="images/cd-8.png" alt=""></span>
+              <span class="cd-selector__title">POL CARTIER - DECONSTRUCTED SET</span>
+            </span>
+          </button>
+          <button class="cd-selector__choice" type="button" data-video-id="tm72HfdwDJo" data-start="0" aria-pressed="false" title="BB46 - GROOVE SET">
+            <span class="cd-selector__disc">
+              <span class="cd-selector__art"><img src="images/cd-8.png" alt=""></span>
+              <span class="cd-selector__title">BB46 - GROOVE SET</span>
+            </span>
+          </button>
+          <button class="cd-selector__choice" type="button" data-video-id="los688s0fKM" data-start="815" aria-pressed="false" title="BB46 - HARDGROOVE SET">
+            <span class="cd-selector__disc">
+              <span class="cd-selector__art"><img src="images/cd-8.png" alt=""></span>
+              <span class="cd-selector__title">BB46 - HARDGROOVE SET</span>
+            </span>
+          </button>
+          <button class="cd-selector__choice" type="button" data-video-id="JrNi_F8DMLo" data-start="1136" aria-pressed="false" title="TLEILAXX - UKG &amp; SPEEDGARAGE SET">
+            <span class="cd-selector__disc">
+              <span class="cd-selector__art"><img src="images/cd-8.png" alt=""></span>
+              <span class="cd-selector__title">TLEILAXX - UKG &amp; SPEEDGARAGE SET</span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <span class="cd-selector__hint" aria-hidden="true">
+        SET SELECT <span class="cd-selector__hint-arrow"></span>
+      </span>
+      <span class="cd-selector__now-playing" aria-hidden="true">
+        <img src="images/cd-8-pixel.png" alt="">
+      </span>
+    </nav>
+    <a class="back-link" href="index.html" aria-label="Retour à l’accueil">
+      <img src="images/back.png" alt="Retour à l’accueil">
+    </a>
+    <p class="media-status" role="alert" hidden></p>
+  </main>
+</body>
+</html>

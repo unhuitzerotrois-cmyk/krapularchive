@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="icone/favicon-32.png" type="image/png" sizes="32x32">
+  <title>ADMINISTRATION DE L’AGENDA</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+  <script src="admin-agenda.js" defer></script>
+</head>
+<body data-page="admin-agenda">
+  <main class="stage admin-stage" aria-label="Administration de l’agenda">
+    <video class="stage-video page-video" data-video="admin-agenda" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+      <source src="vidéos/agenda.webm" type='video/webm; codecs="vp9"'>
+      <source src="vidéos/agenda.mp4" type="video/mp4">
+    </video>
+    <section class="agenda-admin" aria-labelledby="admin-title">
+      <h1 id="admin-title">Administration de l’agenda</h1>
+      <p class="agenda-admin__notice">Ajoute ou modifie les événements, puis télécharge le fichier et remplace <code>events.json</code> sur le site pour publier les changements à tous les visiteurs.</p>
+      <form class="event-form" id="event-form">
+        <input id="event-id" name="id" type="hidden">
+        <label>
+          Date
+          <input id="event-date" name="date" type="date" required>
+        </label>
+        <label>
+          Nom de l’événement
+          <input id="event-title" name="title" type="text" maxlength="120" required>
+        </label>
+        <div class="event-form__row">
+          <label>
+            Heure (facultatif)
+            <input id="event-time" name="time" type="time">
+          </label>
+          <label>
+            Lieu (facultatif)
+            <input id="event-location" name="location" type="text" maxlength="120">
+          </label>
+        </div>
+        <label>
+          Informations complémentaires (facultatif)
+          <textarea id="event-description" name="description" rows="3" maxlength="500"></textarea>
+        </label>
+        <div class="event-form__actions">
+          <button class="calendar-button calendar-button--action" id="submit-event" type="submit">Ajouter l’événement</button>
+          <button class="calendar-button calendar-button--secondary" id="cancel-edit" type="button" hidden>Annuler la modification</button>
+        </div>
+      </form>
+      <section class="agenda-admin__list" aria-labelledby="events-title">
+        <h2 id="events-title">Événements</h2>
+        <ul class="admin-event-list" id="admin-event-list"></ul>
+      </section>
+      <div class="agenda-admin__footer">
+        <button class="calendar-button calendar-button--action" id="download-events" type="button">Télécharger events.json</button>
+        <p id="admin-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+    <a class="back-link" href="index.html" aria-label="Retour à l’accueil">
+      <img src="images/back.png" alt="Retour à l’accueil">
+    </a>
+  </main>
+</body>
+</html>
